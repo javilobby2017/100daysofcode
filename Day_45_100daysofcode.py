@@ -1,6 +1,9 @@
-# | Name | Date | Priority
+# | Name | Date | Priority day 51 included with day 45
 import os, time
 todo = []
+f = open("to.do", "r")
+todo = eval(f.read())
+f.close()
 
 def add():
     time.sleep(1)
@@ -73,4 +76,7 @@ while True:
 
     time.sleep
     os.system("clear")
+    f = open("to.do", "w")
+    f.write(str(todo))
+    f.close
         
